@@ -1,11 +1,38 @@
+/*general styles*/
+/*wielkośc elementu z paddingami, ramkami*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: beige;
+}
+
+
+/*menu styles*/
+
+
+/*selektor glownego kontenera*/
 .main-nav {
-    background-color: #ffff;
+/*    menu zafixowane*/
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+/*    text-align: right;*/
+    justify-content: flex-end;
+
 }
 
-.menu-list {
-    
+.main-nav .menu-item {
+    display: inline-block;    
 }
 
-.menu-item {
-    
+.main-nav .menu-item a {
+    color: #1ac056;
+    text-decoration: none;
+    padding: 15px;
 }
