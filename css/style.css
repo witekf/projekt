@@ -1,7 +1,6 @@
 /*general styles*/
 /*wielkośc elementu z paddingami, ramkami*/
 
-
 * {
     box-sizing: border-box;
 }
@@ -11,6 +10,16 @@ body {
     background-color: beige;
 }
 
+/*naglowki nie sa bold a sa lekkie w calym dokumencie*/
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 300;
+    text-align: center;
+}
+/*wszystkie spany tekstow sa lekko grubsze i zielone*/
+span {
+    font-weight: 400;
+    color: #1ac056;
+}
 
 /*menu styles*/
 
@@ -24,9 +33,9 @@ body {
     display: flex;
 /*    text-align: right;*/
     justify-content: flex-end;
-
 }
 
+/*dla czytelnosci zagniezdzony selektor*/
 .main-nav .menu-item {
     display: inline-block;    
 }
@@ -36,3 +45,25 @@ body {
     text-decoration: none;
     padding: 15px;
 }
+
+/*header styles*/
+
+.main-header {
+    background-image: url(../img/header-background.jpg);
+    height: 100vh;
+/*    obrazek msa wypelnic caly blok i wyrzuci to co wyjdzie poza przestrzen*/
+    background-size: cover;
+/*    na srodku bloku*/
+    background-position: center;
+/*    blok tekstu ma byc wycentrowany wzg. main-header wiec tu tj w rodzicy trzeba napisac to co poniezej*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-header .main-header-content {
+    color: #fff;
+    
+}
+
+
