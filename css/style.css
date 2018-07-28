@@ -78,6 +78,14 @@ section {
     color: #fff;
 }
 
+.main-header .main-header h1 {
+font-size: 4em;
+}
+
+.main-header .main-header h2 {
+font-size: 2em;
+}
+
 /*sekcja o mnie*/
 
 .about-me .about-me-figure img {
