@@ -15,10 +15,23 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: 300;
     text-align: center;
 }
+
+h2 {
+    font-size: 1.8em;
+}
+
+
+
 /*wszystkie spany tekstow sa lekko grubsze i zielone*/
 span {
     font-weight: 400;
     color: #1ac056;
+}
+
+/*wszystkie bloki maja paddingi*/
+section {
+    padding-top: 30px;
+    padding-bottom: 60px;
 }
 
 /*menu styles*/
@@ -63,7 +76,12 @@ span {
 
 .main-header .main-header-content {
     color: #fff;
-    
+}
+
+/*sekcja o mnie*/
+
+.about-me .about-me-figure img {
+    max-height: 350px;
 }
 
 
