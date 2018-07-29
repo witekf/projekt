@@ -1,4 +1,4 @@
-/*general styles*/
+/***********************general styles*/
 /*wielkośc elementu z paddingami, ramkami*/
 
 * {
@@ -7,7 +7,13 @@
 
 body {
     font-family: 'Lato', sans-serif;
-    background-color: beige;
+    color: #291f1a;
+/*    background-color: beige;*/
+}
+
+/*interlinia dla <p> jest wieksza niz standardowo 1*/
+p {
+    line-height: 1.4;
 }
 
 /*naglowki nie sa bold a sa lekkie w calym dokumencie*/
@@ -20,6 +26,24 @@ h2 {
     font-size: 1.8em;
 }
 
+/*wszystkie sekcje o mnie i ponizej sa podobne do siebie: w sensie szerokosci itp*/
+.container {
+    display: flex;
+    margin: auto;
+    max-width: 1170px;
+/*    oddalmy text od prawej krawedzi strony*/
+    padding: 0 30px;
+    padding-top: 30px;
+}
+
+/*podzial na 2 kolumny*/
+.container .col-1-2 {
+    flex-basis: 50%;
+}
+
+.container .col-1-4 {
+    flex-basis: 25%;
+}
 
 
 /*wszystkie spany tekstow sa lekko grubsze i zielone*/
@@ -34,14 +58,19 @@ section {
     padding-bottom: 60px;
 }
 
-/*menu styles*/
+
+figure {
+    margin: 0;
+}
+
+/********************menu styles*/
 
 
 /*selektor glownego kontenera*/
 .main-nav {
 /*    menu zafixowane*/
     position: fixed;
-    background-color: #fff;
+    background-color: #f9fcfe;
     width: 100%;
     display: flex;
 /*    text-align: right;*/
@@ -59,7 +88,7 @@ section {
     padding: 15px;
 }
 
-/*header styles*/
+/*******************header styles*/
 
 .main-header {
     background-image: url(../img/header-background.jpg);
@@ -86,10 +115,121 @@ font-size: 4em;
 font-size: 2em;
 }
 
-/*sekcja o mnie*/
+/**********************sekcja o mnie*/
 
 .about-me .about-me-figure img {
     max-height: 350px;
+    /*    jednostka zaokr jest w px*/
+    border-radius: 15px;
+/*    nie trzeba bo radius dziala nawet dla borderwidth=0 co jest domyslna gruboscia*/
+    border-width: 10px;
+/*    img jest znacznikiem liniowym i mozna uzyc text-align: */
 }
 
+.about-me {
+    background-color: #f9fcfe;
+}
+
+/*srodkowanie jest na pudelku nie na obrazku*/
+.about-me .about-me-figure {
+text-align: center;
+}
+
+
+/*******************sekcja moje umiejetnosci*/
+
+.skills {
+    text-align: center;
+    background-color: #f9fcfe;
+}
+
+.skills .skills-item {
+    flex-basis: 20%
+}
+
+/*powiekszamy ikone 4x w stosunku do... wielkosci fontu body ktory standardowo ma 16px*/
+.skills .skills-item i {
+    font-size: 4em;
+}
+
+/*uzywamy atrybutow flexa*/
+.skills .container-skills {
+    justify-content: center;
+    align-content: space-around;
+}
+
+/*podpisy pod ikonkami*/
+.skills .skills-item figcaption {
+    margin-top: 15px;
+}
+
+
+/*************************sekcja portfolio*/
+
+.portfolio {
+    background-color: #f9fcfe;
+}
+
+
+.portfolio .portfolio-item img {
+    width: 100%;
+    height: 100%;
+/*    wypelnia przestrzen bloku przez dopasowanie*/
+    object-fit: cover;
+}
+
+.portfolio .portfolio-item {
+    flex-basis: 33.33%;
+    max-height: 350px;
+/*    maska w stosunku do portfolio-item*/
+    position: relative;
+    color: #fff;
+}
+
+.portfolio .portfolio-mask {
+/*    maska w stosunku do portfolio-item*/
+    position: absolute;
+    background-color: rgba(33, 59, 80, 0.7);
+    width: 100%;
+    height: 100%;
+    
+/*    niech tekst i ikona w masce beda cale centrowane*/
+    display: flex;
+    align-items: center;
+    
+/*    maska musi byc normalnie wygaszona*/
+    opacity: 0;
+/*    musi ladnie sie pojawic, tj wolno*/
+    transition: all 0.3s;
+}
+
+.portfolio .portfolio-mask:hover {
+    opacity: 1;
+}
+
+/*maska*/
+
+.portfolio .portfolio-content {
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+.portfolio .portfolio-content h3, 
+.portfolio .portfolio-content h4 {
+    font-weight: 700;
+    margin: 0;
+}
+
+.portfolio .portfolio-content .portfolio-link {
+    color: #1ac056;
+    font-size: 2em;
+}
+
+.portfolio .portfolio-content .portfolio-link:hover {
+    color: #fff;
+    transition: all 0.3s;
+}
+
+/**********************************stopka*/
 
