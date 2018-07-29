@@ -356,7 +356,7 @@ text-align: center;
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 720px) {
     .container .col-1-2 {
         flex-basis: 100%;
     }
