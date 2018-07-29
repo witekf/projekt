@@ -232,6 +232,8 @@ text-align: center;
     color: #fff;
     text-align: center;
     padding: 15px;
+/*    dla responsywności*/
+    width: 100%;
 }
 
 .portfolio .portfolio-content h3, 
@@ -344,9 +346,33 @@ text-align: center;
 
 /******************responsywaność*/
 
+@media (max-width: 1170px) {
+    .portfolio .portfolio-item {
+        flex-basis: 50%;
+    }
+    .portfolio .portfolio-item:last-child {
+        flex-basis: 100%;
+    }
+}
+
 
 @media (max-width: 768px) {
     .container .col-1-2 {
         flex-basis: 100%;
     }
+    .skills .skills-item {
+        flex-basis: 50%;
+        margin-bottom: 45px;
+    }
+    .portfolio. portfolio-item {
+        flex-basis: 100%;
+    }
 }
+
+@media (max-width: 480px) {
+    .skills .skills-item {
+        flex-basis: 100%;
+    }
+}
+
+
