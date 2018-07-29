@@ -381,8 +381,12 @@ text-align: center;
     }
     .main-nav .menu-item {
         display: block;
-        padding: 15px;
+        padding-bottom: 10px;
         text-align: right;
+    }
+    .main-header {
+        height: 50vh;
+        padding-top: 150px;
     }
 }
 
