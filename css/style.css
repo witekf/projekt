@@ -367,6 +367,10 @@ text-align: center;
     .portfolio. portfolio-item {
         flex-basis: 100%;
     }
+    .contact-footer,
+    .contakt-footer h2 {
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
